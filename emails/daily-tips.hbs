@@ -1,0 +1,161 @@
+{{> header  }}
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family:'Barlow', sans-serif;">
+    <tbody>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#dde8fd">
+                    <tbody>                        
+                        <tr>
+                            <td class="p0-15" style="padding: 0px 30px;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="h2-center pb40"
+                                                style="color:#131A37;padding-top:20px; font-family:'Barlow', sans-serif; font-size:32px; line-height:36px; text-align:center; padding-bottom:10px;">
+                                                <multiline>{{ email_title }}</multiline>
+                                            </td>
+                                            
+                                        </tr>
+                                         <tr>
+                                            <td class="h2-center pb40"
+                                                style="color:#131A37;padding-top:0px; font-family:'Barlow', sans-serif; font-size:20px; line-height:36px; text-align:center; padding-bottom:30px;">
+                                                <multiline>{{ package_name }}</multiline>
+                                            </td>
+                                            
+                                        </tr>
+                                        {{#each tips }}
+                                        <tr>
+
+                                            <td class="p30-15-0"
+                                                style="border-radius:10px; padding: 20px; margin-bottom:30px; text-align:left;"
+                                                bgcolor="#ffffff">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td
+                                                                style="font-size:20px; line-height:27px;  color: #131A37; padding-bottom: 15px; font-weight:600; text-align:left;">
+                                                                {{ venue }}<small
+                                                                    style="font-size:14px; font-weight: 400; color: #838AA7; padding:0 0 0 7px;">by:
+                                                                    {{ tipsterName }}</small></td>
+                                                            {{!-- <td
+                                                                style="font-size:14px; line-height:22px; padding-bottom: 15px;text-align:right;">
+                                                                Apr 16, 2019</td> --}}
+                                                        </tr>
+                                                    {{#each raceTips }}
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <table class="table-border-inner" border="0"
+                                                                    cellspacing="2" cellpadding="0"
+                                                                    style="font-size:14px; line-height:22px; text-align:left;">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="td-border-inner">R{{ raceNo }}</td>
+                                                                            <td class="td-border-inner">#{{ horseNo }}</td>
+                                                                            <td class="td-border-inner">{{ horseName }}
+                                                                            </td>
+                                                                            <td class="td-border-inner">{{ tipType }}</td>
+                                                                            <td class="td-border-inner">{{ topFour }}</td>
+
+                                                                        </tr>
+                                                                      
+                                                                        <tr>
+                                                                            <td colspan="5">
+                                                                                {{ tipDataDisp }}
+                                                                            </td>
+                                                                        </tr>
+                                                                      
+                                                                        <tr>
+                                                                            <td colspan="5">{{ comment }}</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    {{/each }}
+                                                        <tr>
+                                                            <td colspan="2">
+
+                                                                <table class="table-border-inner2">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            {{#if quaddie}}
+                                                                            <td width="50%" valign="top">
+                                                                                <table border="0" cellspacing="0"
+                                                                                    cellpadding="0"
+                                                                                    style="font-size:14px;  line-height:22px; text-align:left;">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td
+                                                                                                style="font-size:16px; line-height:24px; font-weight:500; text-align:left;">
+                                                                                                Quaddie:</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="white-space: pre-wrap">
+                                                                                                {{{ quaddie }}}
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                            {{/if}}
+
+                                                                            {{#if multi}}
+                                                                            <td width="50%" valign="top">
+                                                                                <table border="0" cellspacing="2"
+                                                                                    cellpadding="0"
+                                                                                    style="font-size:14px; line-height:22px;  text-align:left;">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td
+                                                                                                style="font-size:16px; line-height:24px; font-weight:500; text-align:left;">
+                                                                                                Multi:</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td style="white-space: pre-wrap"> 
+                                                                                                {{{ multi }}}
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                            {{/if}}
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td height="15" width="100"></td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding-bottom:20px;">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td class="text-button button-blue" style="font-family:'Barlow', sans-serif; font-size:14px; line-height:18px; text-align:center; padding:10px 30px; border-radius:20px; background:transparent; color:#4668b1; border:2px solid #4668b1;">
+                                            <multiline><a href="{{ tips_url }}" target="_blank" class="link-blue" style="color:#4668b1; text-decoration:none;"><span class="link-blue"style="color:#4668b1; text-decoration:none; font-weight:600;">Visit website</span></a></multiline>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+
+{{> footer }}
